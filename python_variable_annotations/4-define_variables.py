@@ -2,10 +2,10 @@
 """Ceci est une description"""
 
 
-a = 1
+a: int = 1
 
-pi = 3.14
+pi: float = 3.14
 
-i_understand_annotations = True
+i_understand_annotations: bool = True
 
-school = "Holberton"
+school: str = "Holberton"
