@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Cecdeedffr"""
+"""Ceci est une description"""
 
 
 def floor(n: float) -> int:
-    """rfrr"""
+    """Ceci est une description"""
     import math
     return math.floor(n)
