@@ -3,8 +3,8 @@
 from typing import Tuple
 
 
-def index_range(page, page_size):
+def index_range(page: int, page_size: int) -> Tuple[int, int]:
     """Ceci est une description"""
     start = (page - 1) * page_size
-    end = page + page_size
-    return start, end
+    end = start + page_size
+    return (start, end)
