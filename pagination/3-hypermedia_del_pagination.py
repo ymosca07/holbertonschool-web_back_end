@@ -39,7 +39,8 @@ class Server:
             }
         return self.__indexed_dataset
 
-    def get_hyper_index(self, index: int = None, page_size: int = 10) -> dict[str, any]:
+    def get_hyper_index(self, index:
+                        int = None, page_size: int = 10) -> dict[str, any]:
         """Ceci est une description"""
         assert isinstance(index, int) and index >= 0
 
