@@ -1,0 +1,2 @@
+// Ceci est un commentaire
+db.school.find({ name: "Holberton school" }).forEach(printjson)
