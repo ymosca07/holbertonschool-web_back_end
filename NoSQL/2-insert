@@ -1,2 +1,2 @@
 // Ceci est un commentaire
-db.school.insertOne({ name: "Holberton school" })
+db.school.insertOne( name: "Holberton school" )
