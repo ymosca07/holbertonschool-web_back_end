@@ -39,10 +39,27 @@ class Server:
             }
         return self.__indexed_dataset
 
-    def get_hyper_index(self, index: int = None, page_size: int = 10) -> dict:
-            return {
-                 "index": index * page_size,
-                 "next_index": 
-                 "page_size": page_size
-                 "data":
-            }
+    def get_hyper_index(self, index: int = None, page_size: int = 10) -> dict[str, any]:
+        """Ceci est une description"""
+        assert isinstance(index, int) and index >= 0
+
+        indexed_data = self.indexed_dataset()
+        assert index < len(indexed_data)
+
+        data = []
+        current_index = index
+        collected = 0
+
+        while collected < page_size and current_index < len(self.__dataset):
+            item = indexed_data.get(current_index, None)
+            if item:
+                data.append(item)
+                collected += 1
+            current_index += 1
+
+        return {
+            "index": index,
+            "next_index": current_index,
+            "page_size": len(data),
+            "data": data
+        }
